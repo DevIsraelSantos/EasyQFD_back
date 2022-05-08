@@ -167,4 +167,8 @@ dist
 # Ignore code-workspaces
 *.code-workspace
 
+.env
+.sqlite
+.sqlite3
+
 # End of https://www.toptal.com/developers/gitignore/api/node,visualstudiocode
