@@ -1,0 +1,17 @@
+{
+  "name": "EasyQFD_back",
+  "version": "1.0.0",
+  "description": "Backend da aplicação EasyQFD",
+  "main": "index.js",
+  "repository": "www.github.com/DevIsraelSantos/EasyQFD_back",
+  "author": "Dev_IsraelSantos",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mysql": "^2.18.1",
+    "sequelize": "^6.19.0"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.4.1"
+  }
+}
