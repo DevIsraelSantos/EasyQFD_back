@@ -4,13 +4,14 @@ require('dotenv').config({
   })
 
 const express = require('express');
-
+const connection =  require('./app/models/index')
 class AppController{
 
     constructor() {
         this.express = express();
         this.middlewares();
         this.routes();
+
     }
 
     middlewares(){
