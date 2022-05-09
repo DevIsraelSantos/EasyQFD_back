@@ -9,7 +9,9 @@
   "scripts": {
     "dev": "nodemon src/server.js --ignore __tests__",
     "start": "node src/server",
-    "test": "jest"
+    "pretest": "SET NODE_TEST=true && yarn sequelize db:migrate",
+    "test": "SET NODE_TEST=true && jest",
+    "posttest": "SET NODE_TEST=true && yarn sequelize db:migrate:undo:all"
   },
   "dependencies": {
     "dotenv": "^16.0.0",
@@ -19,6 +21,7 @@
     "sqlite3": "^5.0.8"
   },
   "devDependencies": {
+    "@types/jest": "^27.5.0",
     "jest": "^28.1.0",
     "nodemon": "^2.0.16",
     "sequelize-cli": "^6.4.1"
