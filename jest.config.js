@@ -1,7 +1,4 @@
-/*
- * For a detailed explanation regarding each configuration property, visit:
- * https://jestjs.io/docs/configuration
- */
+require('dotenv').config({path:'.env.test'})
 
 module.exports = {
   // All imported modules in your tests should be mocked automatically
@@ -17,7 +14,7 @@ module.exports = {
   clearMocks: true,
 
   // Indicates whether the coverage information should be collected while executing the test
-  collectCoverage: true,
+   collectCoverage: false,
 
   // An array of glob patterns indicating a set of files for which coverage information should be collected
   collectCoverageFrom: ["src/**", '!src/database/migrations/**', '!src/server.js', '!src/config/**'],
@@ -154,7 +151,7 @@ module.exports = {
 
   // The glob patterns Jest uses to detect test files
   testMatch: [
-    "**/__tests__/**/*.test.js?(x)"
+    "**/__tests__/**/"+process.env.RGX_TEST+".test.js?(x)"
     ],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
