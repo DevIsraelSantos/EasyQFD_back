@@ -168,7 +168,7 @@ dist
 *.code-workspace
 
 .env
-.sqlite
-.sqlite3
+*.sqlite
+*.sqlite3
 __tests__\coverage*
 # End of https://www.toptal.com/developers/gitignore/api/node,visualstudiocode

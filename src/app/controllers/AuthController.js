@@ -1,6 +1,9 @@
 const User = require('../models/User')
 
+let message = '';
 class AuthController {
+
+
     async store(req, res) {
 
         const { email, senha } = req.body;
@@ -20,5 +23,15 @@ class AuthController {
             token: user.generateToken()
         });
     }
+
+    async create(req, res) {
+
+        try{
+            return res.status(200).json({message})
+        }catch (erro){
+            return res.status(400).json({erro})
+        }
+    }
+
 }
 module.exports = new AuthController();

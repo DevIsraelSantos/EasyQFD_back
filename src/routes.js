@@ -6,6 +6,7 @@ const AuthController = require('./app/controllers/AuthController');
  //Definição das rotas
 
 routes.post('/auth', AuthController.store)
+routes.post('/auth/new', AuthController.create)
 
 
 //Aplica validação de token
