@@ -7,6 +7,7 @@
   "author": "Dev_IsraelSantos",
   "license": "MIT",
   "scripts": {
+    "predev": "yarn sequelize db:migrate",
     "dev": "nodemon src/server.js --ignore __tests__",
     "start": "node src/server",
     "pretest": "SET NODE_TEST=true && yarn sequelize db:migrate",

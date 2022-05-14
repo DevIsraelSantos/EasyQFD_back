@@ -12,8 +12,8 @@ routes.post('/auth/new', AuthController.create)
 //Aplica validação de token
 routes.use(authMiddlewares)
 
-routes.post('/home', (req, res) => {
-    res.status(200).send();
+routes.post('/', (req, res) => {
+    res.status(200).send('online');
 })
 
  //Retorna as rotas

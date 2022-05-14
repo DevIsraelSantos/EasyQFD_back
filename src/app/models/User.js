@@ -8,7 +8,6 @@ class User extends Model {
 
   static init(sequelize) {
     super.init({
-      nome: DataTypes.STRING,
       email: DataTypes.STRING,
       senha: DataTypes.VIRTUAL,
       senha_hash: DataTypes.STRING
